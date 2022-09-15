@@ -1,0 +1,19 @@
+name: stg-release
+
+on:
+  push:
+    branches: [ "stg-release" ]
+  pull_request:
+    branches: [ "stg-release" ]
+
+  workflow_dispatch:
+
+jobs:
+  stg-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: deploy to staging environment
+        run: echo stg-release

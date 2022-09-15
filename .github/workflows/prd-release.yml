@@ -1,0 +1,19 @@
+name: prd-release
+
+on:
+  push:
+    branches: [ "prd-release" ]
+  pull_request:
+    branches: [ "prd-release" ]
+
+  workflow_dispatch:
+
+jobs:
+  prd-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: deploy to production environment
+        run: echo prd-release

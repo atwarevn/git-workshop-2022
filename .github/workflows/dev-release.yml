@@ -1,0 +1,19 @@
+name: dev-release
+
+on:
+  push:
+    branches: [ "dev-release" ]
+  pull_request:
+    branches: [ "dev-release" ]
+
+  workflow_dispatch:
+
+jobs:
+  dev-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: deploy to dev environment
+        run: echo dev-release

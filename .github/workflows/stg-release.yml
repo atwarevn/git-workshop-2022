@@ -2,9 +2,9 @@ name: stg-release
 
 on:
   push:
-    branches: [ "stg-release" ]
+    branches: ["stg-release"]
   pull_request:
-    branches: [ "stg-release" ]
+    branches: ["stg-release"]
 
   workflow_dispatch:
 

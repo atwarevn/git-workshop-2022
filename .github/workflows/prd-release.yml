@@ -2,9 +2,9 @@ name: prd-release
 
 on:
   push:
-    branches: [ "prd-release" ]
+    branches: ["prd-release"]
   pull_request:
-    branches: [ "prd-release" ]
+    branches: ["prd-release"]
 
   workflow_dispatch:
 

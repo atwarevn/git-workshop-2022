@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WORKSHOP 2022</title>
+    <meta charset="utf-8" />
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: "Droid Serif";
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Yanone Kaffeesatz";
+        font-weight: normal;
+      }
+      .remark-code,
+      .remark-inline-code {
+        font-family: "Ubuntu Mono";
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# WORKSHOP GIT
+### Git collaborating: 18-09
+
+---
+
+# Agenda
+
+1. What will you learn today
+1. GitHub & Setting
+1. Git Collaborating
+ - On the same branch
+ - On the different branch
+1. Git flow & GitHub action
+
+---
+
+# What will you learn today
+
+1. Know how to use git to collaborate with team members to manage and share source code
+
+1. Know the concept of git flow and how to use it with github action
+---
+  # GitHub & Setting (1)
+Internet hosting service for software development and version control using Git.
+It provides the distributed version control of Git plus
+  - Access control
+  - Bug tracking
+  - Software feature requests 🟢
+  - Task management
+  - Continuous integration 🟢
+  - Wikis for every project
+
+---
+  # GitHub & Setting (2)
+
+  ### Create personal access token
+  1. From user menu, click 'Setting'
+  2. From sidebar menu, click 'Developer settings'
+  3. From sidebar menu, click 'Personal access tokens'
+  4. Click 'generate new token' button
+  5. Create new-token as follow
+  ```
+    Note: workshop-2022
+    Expiration: 7 days
+    Select scopes: repo (at least)
+  ```
+  6. Copy generated token to use later
+---
+  # GitHub & Setting (3)
+
+  ### Create a new repository
+  access https://github.com/new
+
+  create a new repository on the command line
+  ```
+    echo "# test" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin https://[TOKEN]@github.com/[USER]/[REPO]
+    git push -u origin main
+  ```
+---
+  # Git Collaborating
+  Git commands will use
+  ```
+  git add - ☑️
+  git commit - ☑️
+  git switch/checkout/branch - ☑️
+  git fetch
+  git log (git log --all --decorate --oneline --graph)
+  git pull
+  git push
+  git rebase
+  git merge
+  ```
+---
+  <img src="img/git-collaborate.png" alt="drawing" width="800"/>
+---
+      # On the same branch
+
+[git-collaborating_1](https://github.com/atwarevn/git-workshop-2022/tree/main/git-collaborating_1.md)
+---
+      # On the different branch
+
+[git-collaborating_2.md](https://github.com/atwarevn/git-workshop-2022/tree/main/git-collaborating_2.md)
+---
+      # Git flow & GitHub action
+### Git flow in team work
+[Git flow](https://github.com/atwarevn/git-workshop-2022/tree/main/img/git-model@2x.png)
+
+branches
+ - main
+ - develop
+ - dev-release
+ - stg-release
+ - prd-release
+ - feature/\*\*
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 ### On the different branch
 
 Task:
-Add row `"University"` and `"Year"` but on different git branch and merge them to main
+Add row `"University"` and `"Year"` for the file: introduction.text but on different git branch and merge them to main
 
 Example
 on branch feature/introduction_1
@@ -23,7 +23,7 @@ Year: 3rd #new line
 #### 1. Create development branch
 
 ```sh
-git switch main # switch to base branch
+git switch main # switch to main branch
 git pull # get latest code
 git switch -C feature/introduction_1 # create new branch
 
@@ -36,7 +36,7 @@ git push --set-upstream origin feature/introduction_1
 ```
 
 ```sh
-git switch main  # switch to base branch
+git switch main  # switch to main branch
 git pull # get latest code
 
 git switch -C feature/introduction_2 # create another new branch
@@ -57,13 +57,14 @@ git push --set-upstream origin feature/introduction_2
 git switch feature/introduction_1 # switch branch
 
 git switch -C feature/merge_introduction # create a merge branch
-git merge origin feature/introduction_2
+git merge feature/introduction_2
 
 # resolve conflict if any
 echo 'please resolve conflict if any'
 
 git add .
 git commit -m 'combined commits'
+git push --set-upstream origin feature/merge_introduction
 ```
 
 ##### b. Rebase
